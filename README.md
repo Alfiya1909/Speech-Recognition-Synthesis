@@ -17,3 +17,5 @@ User Management System with secure registration, login, and activity logging usi
 Built with Django (backend), HTML/CSS/JavaScript (frontend), and PyTorch for ML components.
 
 This project demonstrates the integration of cutting-edge ML models into a user-friendly web interface, enabling seamless voice-based interaction, transcription, and translation.
+
+Watch demo: Speech Recognition & Synthesis.mp4
