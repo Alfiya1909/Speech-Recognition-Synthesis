@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Text to Speech</h2>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label>Enter Text:</label>
+
+        <textarea name="text" class="form-control"></textarea>
+        <button type="submit" class="btn btn-primary mt-2">Convert to Speech</button>
+    </form>
+
+    <form method="POST" enctype="multipart/form-data" class="mt-3">
+        {% csrf_token %}
+        <label>Upload Text File:</label>
+        <input type="file" name="text_file" class="form-control">
+        <button type="submit" class="btn btn-success mt-2">Upload and Convert</button>
+    </form>
+
+    {% if audio_file %}
+    <h3 class="mt-3">Generated Audio:</h3>
+    <audio controls>
+        <source src="{{audio_file}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    {% endif %}
+
+    {% if error %}
+    <p class="text-danger mt-3">{{error}}</p>
+    {% endif %}
+{% endblock %}
