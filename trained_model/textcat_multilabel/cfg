@@ -1,0 +1,13 @@
+{
+  "labels":[
+    "time",
+    "date",
+    "greeting",
+    "weather",
+    "news",
+    "joke",
+    "shutdown",
+    "open_application"
+  ],
+  "threshold":0.5
+}
